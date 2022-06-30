@@ -40,6 +40,41 @@
             </ul>
         </nav>
     </header>
+
+    <section class="flex-container">
+        <article id="article-inicial">
+            <h1>Turismos</h1>
+            <p>O melhor serviço para você!</p>
+            <a href="">Saiba Mais</a>
+        </article>
+        <article>
+            <div>
+                <div><img class="img-apressentacao" src="imagens/0-main.png" alt="banner de apresentação"></div>
+            </div>
+    
+        </article>
+            
+    </section>
+    <script>
+        const btnMobile = document.getElementById('btn-mobile');
+        function toggleMenu(event){
+            if(event.type === 'touchstart') event.preventDefault();
+
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+            const active = nav.contains('active');
+            event.currentTarget.setAttribute('aria-expanded','true');
+            if(active){
+                event.currentTarget.setAttribute('aria-label','Fechar Menu');
+
+            }else{
+                event.currentTarget.setAttribute('aria-label','Abrir Menu')
+            }
+        }   
+        btnMobile.addEventListener('click',toggleMenu);
+        btnMobile.addEventListener('touchstart',toggleMenu);
+
+    </script>
     
 </body>
 </html>
